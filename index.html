@@ -1,59 +1,79 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/png" href="/Logo-ico_CETTEX.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CETTEX Event Registration</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'neon-green': '#39FF14',
-              'dark-purple': '#0b0014',
-            },
-            animation: {
-              'fade-in-up': 'fadeInUp 1s ease-out forwards',
-              'glow': 'glow 2s ease-in-out infinite alternate',
-              'float': 'float 3s ease-in-out infinite',
-            },
-            keyframes: {
-              fadeInUp: {
-                '0%': { opacity: '0', transform: 'translateY(20px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              },
-              glow: {
-                'from': {
-                  textShadow: '0 0 5px #fff, 0 0 10px #fff, 0 0 15px #39FF14, 0 0 20px #39FF14',
-                  boxShadow: '0 0 5px #39FF14, 0 0 10px #39FF14, inset 0 0 5px #39FF14'
-                },
-                'to': {
-                  textShadow: '0 0 10px #fff, 0 0 20px #fff, 0 0 30px #39FF14, 0 0 40px #39FF14',
-                  boxShadow: '0 0 10px #39FF14, 0 0 20px #39FF14, inset 0 0 10px #39FF14'
-                },
-              },
-              float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-10px)' },
-              },
-            },
-          },
-        },
-      };
-    </script>
+    <meta name="theme-color" content="#0b0014" />
+    <meta name="description" content="Plateforme d'inscription pour la cérémonie de lancement CETTEX - Infrastructure d'Appui à la Compétitivité Verte et Digitale du Textile-Habillement en Tunisie" />
+    <meta name="keywords" content="CETTEX, textile, événement, inscription, Tunisie, industrie" />
+    <meta name="author" content="CETTEX" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/" />
+    <meta property="og:title" content="CETTEX Event Registration" />
+    <meta property="og:description" content="Plateforme d'inscription pour la cérémonie de lancement CETTEX" />
+    <meta property="og:image" content="/Logo-ico_CETTEX.png" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:url" content="/" />
+    <meta property="twitter:title" content="CETTEX Event Registration" />
+    <meta property="twitter:description" content="Plateforme d'inscription pour la cérémonie de lancement CETTEX" />
+    <meta property="twitter:image" content="/Logo-ico_CETTEX.png" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/Logo-ico_CETTEX.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="CETTEX" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="/Logo-ico_CETTEX.png" as="image" />
+    
+    <!-- Accessibility -->
+    <meta name="color-scheme" content="dark" />
+    <meta name="supported-color-schemes" content="dark" />
+    
+    <!-- High contrast support -->
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap');
-      body {
-        font-family: 'Roboto', sans-serif;
+      @media (prefers-contrast: high) {
+        :root {
+          --bg-color: #000000;
+          --text-color: #ffffff;
+          --accent-color: #39FF14;
+        }
       }
-      h1, h2, h3, .font-orbitron {
-        font-family: 'Orbitron', sans-serif;
+      
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+      
+      /* Loading state for logo */
+      .logo-loading {
+        background: linear-gradient(45deg, #39FF14, #00B894);
+        animation: pulse 1.5s ease-in-out infinite;
+      }
+      
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
       }
     </style>
-  <script type="importmap">
+    
+    <script type="importmap">
 {
   "imports": {
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
@@ -66,8 +86,9 @@
   }
 }
 </script>
-</head>
+  </head>
   <body class="bg-dark-purple">
-    <div id="root"></div>
+    <div id="root" role="application" aria-label="Application CETTEX"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>

@@ -1,0 +1,24 @@
+{
+  "name": "CETTEX Event Registration",
+  "short_name": "CETTEX",
+  "description": "Registration platform for CETTEX launch ceremony",
+  "icons": [
+    {
+      "src": "/Logo-ico_CETTEX.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/Logo-ico_CETTEX@2x.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#0b0014",
+  "background_color": "#0b0014",
+  "orientation": "portrait-primary"
+}
