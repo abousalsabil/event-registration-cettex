@@ -17,7 +17,8 @@ const App: React.FC = () => {
 
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen p-4 sm:p-6 md:p-8">
         <div className="w-full max-w-4xl text-center bg-black/50 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-neon-green/30 shadow-2xl shadow-neon-green/20 animate-fade-in-up">
-          <header className="mb-6">
+          <header className="mb-6 flex flex-col items-center">
+            <img src="Logo-ico_CETTEX.png" alt="CETTEX Logo" className="h-20 sm:h-24 md:h-28 mb-4 animate-float" />
             <p className="text-gray-400 mb-4">Sous l’égide du Ministère de l’Industrie des Mines et de l’Energie</p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold my-4 font-orbitron text-white" style={{ textShadow: '0 0 10px #39FF14' }}>
               Cérémonie de Lancement

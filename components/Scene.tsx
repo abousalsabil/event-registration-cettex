@@ -1,6 +1,4 @@
-// Fix: Removed the triple-slash directive for '@react-three/fiber'.
-// In modern TypeScript setups, type definitions are automatically discovered
-// via imports, and this explicit reference was causing a build error.
+/// <reference types="@react-three/fiber" />
 import React, { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Icosahedron, Stars } from '@react-three/drei';
