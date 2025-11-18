@@ -12,6 +12,12 @@ export default {
       colors: {
         'neon-green': '#39FF14',
         'dark-purple': '#0b0014',
+        'cettex-navy': '#1e3a8a',      // Dark Blue/Navy for CTAs, footers, and important sections
+        'cettex-navy-dark': '#1e40af', // Darker navy for hover states
+        'cettex-cyan': '#22d3ee',      // Lighter Cyan/Aqua for accent color
+        'cettex-cyan-light': '#67e8f9', // Light cyan for highlights
+        'cettex-gray': '#f8fafc',      // Light Gray for main content background
+        'cettex-gray-dark': '#64748b',  // Dark gray for text
       },
       animation: {
         'fade-in-up': 'fadeInUp 1s ease-out forwards',
